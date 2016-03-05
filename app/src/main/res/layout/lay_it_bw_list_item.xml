@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/history_item_layout_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:paddingBottom="30dp"
+    android:background="#FFF6EE"
+    android:layout_margin="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/history_item_border01">
+
+        <RelativeLayout
+            android:id="@+id/code_layout"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:background="@drawable/border_code"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:padding="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/history_item_textView_vnum1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border_history_number"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="I"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/history_item_textView_vnum2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/border_history_number"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="N"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/history_item_textView_vnum3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border_history_number"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="C"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="21dp"/>
+
+            <TextView
+                android:id="@+id/history_item_textView_vnum4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/border_history_number"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="D"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="21dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@id/code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/history_item_textView_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="65dp"
+                android:layout_marginTop="5dp"
+                android:text="Config"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/history_item_textView_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="65dp"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"
+                android:text="Date"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/history_item_textView_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="65dp"
+                android:gravity="top"
+                android:text="URL"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageButton
+                android:id="@+id/code_item_imagebutton_go"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:src="@drawable/code_go"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

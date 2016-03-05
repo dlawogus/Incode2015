@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">인코드</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_id">867916543304385</string>
+
+    <string-array name="company_type">
+        <item>기업</item>
+        <item>개인사업</item>
+        <item>학교</item>
+        <item>공공기관</item>
+        <item>단체</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="drawmenu">
+        <item>로고</item>
+        <item>최근사용목록</item>
+        <item>코드생성</item>
+        <item>코드관리</item>
+        <item>인코드란?</item>
+        <item>공지사항</item>
+        <item>버전</item>
+        <item>고객센터</item>
+        <item>로그인</item>
+    </string-array>
+    <string name="title_activity_it_notice">notice</string>
+    <string name="title_activity_it_usercenter">it_usercenter</string>
+    <string name="title_activity_it_qna">it_qna</string>
+    <string name="title_activity_yakgwan">yakgwan</string>
+    <string name="title_activity_it_bw_list_2">it_bw_list_2</string>
+    <string name="title_activity_it_bw_reg_yakgwan">it_bw_reg_yakgwan</string>
+    <string name="title_activity_it_bw_cre_date">it_bw_cre_date</string>
+    <string name="title_activity_it_bw_list_date">it_bw_list_date</string>
+    <string name="title_activity_it_bw_find_pw">it_bw_find_pw</string>
+    <string name="title_activity_it_bw_reg_manage">it_bw_reg_manage</string>
+    <string name="title_activity_it_bw_cre_user">it_bw_cre_user</string>
+    <string name="title_activity_it_bw_reg_password_check">it_bw_reg_password_check</string>
+    <string name="title_activity_it_yakgwan_1">it_yakgwan_1</string>
+
+</resources>
+

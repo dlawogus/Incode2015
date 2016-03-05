@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF6EE">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#19BDC4">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/backbtn"/>
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/btn_back"
+            android:layout_marginLeft="15dp"
+            android:text="코드생성"
+            android:textSize="18sp"
+            android:textColor="#fff"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cre_tab_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#19BDC4"
+                android:text="URL 입력"
+                android:textSize="15sp"
+                android:textColor="#fff"/>
+
+            <View
+                android:id="@+id/cre_tab_indicator_1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#18709C"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="50"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cre_tab_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#19BDC4"
+                android:text="사진업로드"
+                android:textSize="15sp"
+                android:textColor="#D2D2D2"/>
+
+            <View
+                android:id="@+id/cre_tab_indicator_2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#19BDC4"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/cre_fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </FrameLayout>
+    <!--
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cre_scrollView"
+        android:layout_gravity="right" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="30dp">
+
+            <TabHost
+                android:id="@+id/tab_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/border_01">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="60dp">
+
+                    <LinearLayout
+                        android:id="@+id/tab_view1"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="URL 주소 입력"
+                            android:id="@+id/textView3"
+                            android:textSize="20dp"
+                            android:textColor="#3B77A2"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cre_input_url"
+                            android:inputType="textUri"
+                            android:background="@drawable/border_03"
+                            android:singleLine="true"
+                            android:text="http://"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="left" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="URL 설명"
+                            android:textSize="20dp"
+                            android:textColor="#3b77a2"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="20dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:inputType="textMultiLine"
+                            android:id="@+id/cre_input_config"
+                            android:background="@drawable/border_03"
+                            android:hint=""
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="left"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab_view2"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="사진 경로"
+                            android:textSize="20dp"
+                            android:textColor="#3b77a2"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp" />
+
+                        <EditText
+                            android:id="@+id/cre_text_imagepath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/border_03"
+                            android:focusable="false"
+                            android:text="/"
+                            android:textSize="20dp"
+                            android:textColor="#000"
+                            android:singleLine="true"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:gravity="left"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp">
+
+                            <Button
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="카메라"
+                                android:id="@+id/btn_camera"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/cu_btn_03"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                            <Button
+                                android:layout_width="60dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:text="사진"
+                                android:id="@+id/btn_photo"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/cu_btn_03"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:textSize="15dp"/>
+
+                        </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="이미지 설명"
+                                android:textSize="20dp"
+                                android:textColor="#3b77a2"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="10dp"/>
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:id="@+id/cre_input_imageconfig"
+                                android:background="@drawable/border_03"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:padding="10dp"
+                                android:gravity="left"
+                                android:inputType="textMultiLine"/>
+
+                    </LinearLayout>
+                    </FrameLayout>
+                </TabHost>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="코드 생성 방식"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cre_radiogroup_how">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cre_radio_random"
+                        android:text="무작위로(무료)"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:gravity="center_horizontal"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/cre_radio_choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사용자지정"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="#fff"
+                        android:gravity="center_horizontal"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="다음 단계로"
+                    android:id="@+id/btn_next"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/cu_btn_02"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:textColor="#3c3b77a2"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+-->
+</LinearLayout>

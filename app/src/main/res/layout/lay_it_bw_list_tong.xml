@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk4">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center|right"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_back"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="통 계"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/image_tong_man"/>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/listTong_text_man"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/border_01"
+                            android:textSize="20dp"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:focusable="false"
+                            android:enabled="false"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/image_tong_women"/>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/listTong_text_women"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/border_01"
+                            android:textSize="20dp"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:focusable="false"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="20dp">
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/image_tong_unknown"/>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent">
+                        <EditText
+                            android:id="@+id/listTong_text_unknown"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/border_01"
+                            android:textSize="20dp"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="0"
+                            android:focusable="false"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="완 료"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="#ff628cba"
+                        android:background="@drawable/border_01"
+                        android:id="@+id/listTong_button_confirm" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

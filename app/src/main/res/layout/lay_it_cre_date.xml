@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.woody.ext.codecreation.it_bw_cre_date">
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="#FFF6EE">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_1"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageButton_1"
+                    android:src="@drawable/cre_date_check"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="1주(7일)"
+                    android:textColor="#18709C"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageButton_2"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cre_date_check"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="2주(14일)"
+                    android:textColor="#18709C"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_1"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageButton_3"
+                    android:src="@drawable/cre_date_check"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="3주(21일)"
+                    android:textColor="#18709C"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="50"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:id="@+id/imageButton_4"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cre_date_check"
+                    android:background="@android:color/transparent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="1개월(30일)"
+                    android:textColor="#18709C"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cre_date_box"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/cre_date_okay"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="50"
+                android:background="#FFF6EE"
+                android:text="확인"
+                android:textSize="15sp"
+                android:textColor="#18709C"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#BDBDBD"/>
+
+            <Button
+                android:id="@+id/cre_date_cancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="50"
+                android:background="#FFF6EE"
+                android:text="취소"
+                android:textSize="15sp"
+                android:textColor="#18709C"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDBDBD"
+            android:layout_above="@id/cre_date_box"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

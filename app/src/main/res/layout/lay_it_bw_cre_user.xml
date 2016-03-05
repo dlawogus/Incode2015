@@ -1,0 +1,826 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF6EE"
+    android:gravity="center_horizontal"
+    tools:context="dev.woody.ext.codemanager.it_bw_list_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <ImageButton
+            android:id="@+id/close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="9dp"
+            android:src="@drawable/close"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/code_layout"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/border_code"
+        android:layout_marginTop="30dp"
+        android:padding="6dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/code_item_textView_vnum1"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/border_history_number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text=" "
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="38dp"/>
+
+        <Button
+            android:id="@+id/code_item_textView_vnum2"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_history_number"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text=" "
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="38dp"/>
+
+        <Button
+            android:id="@+id/code_item_textView_vnum3"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/border_history_number"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text=" "
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="38dp"/>
+
+        <Button
+            android:id="@+id/code_item_textView_vnum4"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/border_history_number"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text=" "
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="38dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_dont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:text="이미 등록된 코드입니다."
+        android:textColor="#EF428A"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/keyboard_line"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#fff"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:id="@+id/opad">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:id="@+id/btn1"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:id="@+id/btn2"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:id="@+id/btn3"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:id="@+id/btn4"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:id="@+id/btn5"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:id="@+id/btn6"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:id="@+id/btn7"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:id="@+id/btn8"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:id="@+id/btn9"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnchange"
+                android:layout_weight="1"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01"
+                android:text="abc"
+                android:textSize="25dp"
+                android:textColor="#000"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:id="@+id/btn0"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/opad_btnback"
+                android:layout_weight="1"
+                android:padding="18dp"
+                android:background="@drawable/cu_btn_01"
+                android:src="@drawable/delete"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFF6EE"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:id="@+id/opad2">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:id="@+id/opad2_btn1"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="2"
+                android:id="@+id/opad2_btn2"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="3"
+                android:id="@+id/opad2_btn3"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="4"
+                android:id="@+id/opad2_btn4"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="5"
+                android:id="@+id/opad2_btn5"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="6"
+                android:id="@+id/opad2_btn6"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="7"
+                android:id="@+id/opad2_btn7"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="8"
+                android:id="@+id/opad2_btn8"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="9"
+                android:id="@+id/opad2_btn9"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:id="@+id/opad2_btn0"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BDBDBD"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Q"
+                android:id="@+id/opad2_btnq"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="W"
+                android:id="@+id/opad2_btnw"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="E"
+                android:id="@+id/opad2_btne"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="R"
+                android:id="@+id/opad2_btnr"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="T"
+                android:id="@+id/opad2_btnt"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Y"
+                android:id="@+id/opad2_btny"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="U"
+                android:id="@+id/opad2_btnu"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="I"
+                android:id="@+id/opad2_btni"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="O"
+                android:id="@+id/opad2_btno"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="P"
+                android:id="@+id/opad2_btnp"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="A"
+                android:id="@+id/opad2_btna"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="S"
+                android:id="@+id/opad2_btns"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="D"
+                android:id="@+id/opad2_btnd"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="F"
+                android:id="@+id/opad2_btnf"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="G"
+                android:id="@+id/opad2_btng"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="H"
+                android:id="@+id/opad2_btnh"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="J"
+                android:id="@+id/opad2_btnj"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="K"
+                android:id="@+id/opad2_btnk"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="L"
+                android:id="@+id/opad2_btnl"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/opad2_btnchange"
+                android:layout_weight="1"
+                android:src="@drawable/uppad"
+                android:padding="5dp"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Z"
+                android:id="@+id/opad2_btnz"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="X"
+                android:id="@+id/opad2_btnx"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="C"
+                android:id="@+id/opad2_btnc"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="V"
+                android:id="@+id/opad2_btnv"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="B"
+                android:id="@+id/opad2_btnb"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="N"
+                android:id="@+id/opad2_btnn"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="M"
+                android:id="@+id/opad2_btnm"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@drawable/cu_btn_color"
+                android:textColorHighlight="@drawable/cu_btn_color"
+                android:textColorLink="@drawable/cu_btn_color"
+                android:background="@drawable/cu_btn_01" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/opad2_btnback"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:background="@drawable/cu_btn_01"
+                android:src="@drawable/delete"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btnin"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/code_gene"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"/>
+
+</LinearLayout>

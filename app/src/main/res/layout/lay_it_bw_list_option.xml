@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk4">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center|right"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp" >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btn_back"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="설 정"
+            android:id="@+id/textView2"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:id="@+id/listOption_vnumber1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_01"
+                        android:layout_margin="3dp"
+                        android:text=""
+                        android:textSize="70dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:id="@+id/listOption_vnumber2"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/border_01"
+                        android:layout_margin="3dp"
+                        android:text=""
+                        android:textSize="70dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:id="@+id/listOption_vnumber3"
+                        android:background="@drawable/border_01"
+                        android:layout_margin="3dp"
+                        android:text=""
+                        android:textSize="70dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:id="@+id/listOption_vnumber4"
+                        android:background="@drawable/border_01"
+                        android:layout_margin="3dp"
+                        android:text=""
+                        android:textSize="70dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="URL"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittextborder_01"
+                    android:id="@+id/listOption_EditText_url"
+                    android:text="URL"
+                    android:singleLine="true"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설명"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittextborder_01"
+                    android:id="@+id/listOption_EditText_config"
+                    android:text="Config"
+                    android:singleLine="true"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="25dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호(본인확인)"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittextborder_01"
+                    android:id="@+id/listOption_EditText_password"
+                    android:singleLine="true"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="수정"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="#ff628cba"
+                        android:background="@drawable/border_01"
+                        android:id="@+id/listOption_button_confirm" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="취소"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:textColor="#ff628cba"
+                        android:background="@drawable/border_01"
+                        android:id="@+id/listOption_button_cancel"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
